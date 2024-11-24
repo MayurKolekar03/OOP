@@ -1,0 +1,71 @@
+1.PROGRAM ON OBJECT AND CLSSES
+
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+class Person {
+
+public:
+
+string name;
+
+int age;
+void introduce()
+
+{
+
+cout << "Hello.!! myself " << name << " and I am "
+
+<< age << " years old." << endl;
+
+}
+
+};
+int main()
+
+{
+
+Person person1;
+person1.name = "Mayur kolekar";
+
+person1.age = 19;
+
+person1.introduce();
+
+return 0;
+}
+
+
+
+2. PROGRAM ON STRING MANUPULATION FUNCTION IN C++
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string str = "Hello, World!";
+
+    size_t pos = str.find("World");
+    if (pos != string::npos) {
+        cout << "'World' found at position: " << pos << endl;
+    }
+
+    str.replace(pos, 5, "C++");
+    cout << "After replacement: " << str << endl;
+
+    str += " Programming";
+    cout << "After appending: " << str << endl;
+
+    string substr = str.substr(0, 5);
+    cout << "Substring: " << substr << endl;
+
+    str.erase(5, 11);
+    cout << "After erasing: " << str << endl;
+
+    return 0;
+}
