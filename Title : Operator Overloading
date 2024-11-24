@@ -1,0 +1,45 @@
+#include<iostream>
+
+using namespace std;
+
+class Complex
+
+{
+
+private:
+float real;
+float img;
+public:
+Complex(float r=0,float i=0):real(r),img(i)
+{}
+Complex operator+(const Complex& other)
+
+{
+
+return Complex(real+other.real,img+other.img);
+
+}
+
+void display()
+
+{
+cout<<"Real:"<<real<<"Imaginary:"<<img<<endl;
+
+}
+
+};
+
+int main()
+
+{
+
+
+Complex c1(1.2f,1.3f),c2(2.3f,2.4f);
+
+Complex c3=c1+c2;
+
+c3.display();
+
+return 0;
+
+}
