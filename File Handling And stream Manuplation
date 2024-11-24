@@ -1,0 +1,103 @@
+File Handling:
+
+
+#include <fstream>
+
+using namespace std;
+
+int main()
+
+{
+
+fstream file;
+
+file.open("welcome.txt",ios::out);
+
+if(!file)
+
+{
+
+cout<<"Failed to open file.\n";
+
+return 1;
+
+}
+
+else
+
+{
+
+file << "Welcome to CodingNinjas";
+
+cout<<"File created and your data has been entered into the file";
+
+}
+file.close();
+
+return 0;
+
+}
+
+
+Stream manipulation:
+
+
+
+
+#include <iostream>
+
+#include <iomanip>
+
+using namespace std;
+
+int main()
+
+{
+
+cout << setw(3) << 6 << endl << setw(3) << 18 << endl << setw(3) << 124 << endl << "---\n" << (6+18+124) << endl;
+
+cout << "The number is " << setw(6) << setiosflags(ios::fixed) << setprecision(2) << 26.27 << endl;
+
+cout << "The number is " << setw(6) << setiosflags(ios::fixed) << setprecision(2) << 12.3 << endl;
+
+cout << "The number is " << setw(6) << setiosflags(ios::fixed) << setprecision(2) << 1.12 << endl;
+
+cout << setw(6) << setiosflags(ios::fixed) << setprecision(2) << 12.27 << endl;
+
+cout << setw(6) << setiosflags(ios::fixed) << setprecision(2) << 122.3 << endl;
+
+cout << setw(6) << setiosflags(ios::fixed) << setprecision(2) << 1.1212 << endl;
+
+cout << "------\n";
+
+cout << setw(6) << setiosflags(ios::fixed) << setprecision(2) << 26.27 + 12.3 + 1.1212 << endl;
+
+cout << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 26.27 << endl;
+
+cout << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 1212.3 << endl;
+
+cout << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 1.1212 << endl;
+
+cout << "-----\n";
+
+cout << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 26.27 + 1212.3 + 1.1212 << endl;
+
+cout << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 36.12 << endl;
+
+cout << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 10.1212 << endl;
+
+cout << "-----" << endl;
+
+cout << "\nThe value of 14 in octal is " << oct << 14 ;
+
+cout << "\nThe value of 14 in hexadecimal is " << hex << 14 ;
+
+cout << "\nThe value of 0xA in decimal is " << dec << 0xA ;
+
+cout << "\nThe value of 0xA in octal is " << oct << 0xA ;
+
+cout << endl;
+
+return 0;
+
+}
